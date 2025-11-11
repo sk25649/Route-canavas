@@ -43,3 +43,7 @@ next-env.d.ts
 .bun
 .bun-cache
 bun.lockb
+
+# lockfiles (project uses bun)
+package-lock.json
+yarn.lock
