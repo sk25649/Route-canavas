@@ -1,0 +1,40 @@
+# Bun configuration file
+# See: https://bun.sh/docs/runtime/bunfig
+
+[install]
+# Use exact versions for better reproducibility
+exact = true
+
+# Install packages with less console output
+logLevel = "warn"
+
+# Use faster install algorithm
+auto = "auto"
+
+# Enable install cache
+cache = true
+
+[install.cache]
+# Cache location (default: ~/.bun/install/cache)
+dir = ".bun-cache"
+
+# Disable telemetry
+disable = true
+
+[test]
+# Coverage settings
+coverage = true
+coverageThreshold = 80
+
+# Test timeout
+timeout = 10000
+
+# Preload modules for tests
+preload = []
+
+[run]
+# Use bun's faster runtime
+bun = true
+
+# Shell to use for scripts
+shell = "/bin/sh"

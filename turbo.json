@@ -1,0 +1,28 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "tui",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**"],
+      "env": ["NEXT_PUBLIC_MAPBOX_TOKEN"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "dependsOn": ["^lint"],
+      "outputs": []
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "outputs": ["coverage/**"],
+      "inputs": ["lib/**/*.ts", "lib/**/*.tsx", "lib/__tests__/**/*.ts"]
+    },
+    "type-check": {
+      "dependsOn": ["^build"],
+      "outputs": []
+    }
+  }
+}
